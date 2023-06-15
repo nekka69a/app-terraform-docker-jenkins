@@ -10,17 +10,17 @@ pipeline {
         }
         stage('Terraform init') {
             steps {
-                sh 'cd webserver && terraform init'
+                sh 'cd Staging && terraform init'
             }
         }
 	    stage('Terraform plan') {
             steps {
-                sh 'cd webserver && terraform plan'
+                sh 'cd Staging && terraform plan'
             }
         }
         stage('Terraform apply') {
             steps {
-                sh 'cd webserver && terraform apply --auto-approve'
+                sh 'cd Staging && terraform apply --auto-approve'
             }
         }
     }
