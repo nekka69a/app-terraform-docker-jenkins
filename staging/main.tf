@@ -1,4 +1,4 @@
 module "staging" {
-    source = "../webserverModule"
+    source = "../webserver"
   
 }
