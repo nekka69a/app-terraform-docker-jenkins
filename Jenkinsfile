@@ -10,17 +10,17 @@ pipeline {
         }
         stage('Terraform init') {
             steps {
-                sh 'cd Statging && terraform init'
+                sh 'cd staging && terraform init'
             }
         }
 	    stage('Terraform plan') {
             steps {
-                sh 'cd Statging && terraform plan'
+                sh 'cd staging && terraform plan'
             }
         }
         stage('Terraform apply') {
             steps {
-                sh 'cd Statging && terraform apply --auto-approve'
+                sh 'cd staging && terraform apply --auto-approve'
             }
         }
     }
