@@ -15,7 +15,7 @@ pipeline {
         }
 	    stage('Terraform plan') {
             steps {
-                sh 'cd webserver && Terraform plan'
+                sh 'cd webserver && terraform plan'
             }
         }
         stage('Terraform apply') {
