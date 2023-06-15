@@ -8,7 +8,7 @@ pipeline {
             }
         }
         stage('Checkout') {
-            step$class: 'DockerBuilderPublisher', cleanImages: false, cleanupWithJenkinsJobDelete: false, cloud: '', dockerFileDirectory: 'https://github.com/nekka69a/app-terraform-docker-jenkins/', fromRegistry: [credentialsId: 'dockerhub', url: 'https://hub.docker.com/'], pushCredentialsId: 'dockerhub', pushOnSuccess: true, tagsString: 'aminanekka/brief14:latest'
+            step$class: 'DockerBuilderPublisher', cleanImages: false, cleanupWithJenkinsJobDelete: false, cloud: '', dockerFileDirectory: 'https://github.com/nekka69a/app-terraform-docker-jenkins/', pushCredentialsId: 'dockerhub', pushOnSuccess: true, tagsString: 'aminanekka/brief14:latest'
         }
         stage('Terraform init') {
             steps {
