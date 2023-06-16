@@ -9,12 +9,6 @@ pipeline {
             }
            
         }
-	 stage('Checkout') {
-            steps {
-                azureCLI commands: [[exportVariablesString: '', script: 'az login']], principalCredentialId: 'azureID'
-            }
-           
-        }
         stage('Terraform init') {
             steps {
                 sh 'cd staging && terraform init'
