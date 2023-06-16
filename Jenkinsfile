@@ -11,7 +11,7 @@ pipeline {
         }
 	 stage('Checkout') {
             steps {
-                azureCLI commands: [[exportVariablesString: '', script: '']], principalCredentialId: 'azureID'
+                azureCLI commands: [[exportVariablesString: '', script: 'az login']], principalCredentialId: 'azureID'
             }
            
         }
