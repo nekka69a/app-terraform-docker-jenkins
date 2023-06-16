@@ -9,3 +9,13 @@ variable "tenant_id" {
     default = "7349d3b2-951f-41be-877e-d8ccd9f3e73c"
   
 }
+
+variable "client_id" {
+   description = "Azure Client ID"
+   default = "384ba4e4-fc1a-47f4-bf42-acec6fad1e82"
+}
+
+variable "client_secret" {
+   description = "Azure Client Secret"
+   default = "lxk8Q~LfBuObGY4frVfc6B_e4Nqf6UMahS-BdaD-"
+}
