@@ -7,6 +7,7 @@ sh install-docker.sh --dry-run
 sudo sh install-docker.sh
 
 #Buildind image
+sudo git clone https://github.com/nekka69a/app-terraform-docker-jenkins.git
 sudo docker build -t brief14:latest .
 
 #Creating container
