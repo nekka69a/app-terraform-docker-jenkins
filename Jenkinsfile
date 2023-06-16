@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Terraform init') {
             steps {
-                sh 'cd Prod && terraform init'
+                sh 'cd Prod && terraform init -upgrade'
             }
         }
 	    stage('Terraform plan') {
